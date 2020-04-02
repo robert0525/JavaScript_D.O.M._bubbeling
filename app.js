@@ -9,18 +9,20 @@ const removeItemButton = document.querySelector ('.removedItemButton');
 
 
 
-        // listDiv.addEventListener('mouseover',() => {
-        //     listDiv.textContent = listDiv.textContent.toUpperCase();
-        // });
+         listDiv.addEventListener('mouseover',(event) => {
+            if (event.target.tagName == 'LI') {
+         event.target.textContent = event.target.textContent.toUpperCase();
+            }
+         });
 
-        // listDiv.addEventListener('mouseout',() => {
-        //     listDiv.textContent = listDiv.textContent.toLowerCase();
-        // });
+         listDiv.addEventListener('mouseout',(event) => {
+            if (event.target.tagName == 'LI') {
+            event.target.textContent = event.target.textContent.toLowerCase();
+            }
+         });
 
 
-document.addEventListener('click', (event) => {
-    console.log(event.target);
-});
+
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
