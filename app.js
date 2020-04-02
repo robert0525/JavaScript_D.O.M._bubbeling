@@ -6,17 +6,22 @@ const descriptionButton = document.querySelector('button.description');
 const addIthemInput = document.querySelector ('.addIthemInput');
 const addItemButton = document.querySelector ('.addItemButton');
 const removeItemButton = document.querySelector ('.removedItemButton');
-const listItem = document.getElementsByTagName('li');
 
-for (let i = 0; i < listItem.length; i+= 1) {
-        listItem[i].addEventListener('mouseover',() => {
-            listItem[i].textContent = listItem[i].textContent.toUpperCase();
-        });
 
-        listItem[i].addEventListener('mouseout',() => {
-            listItem[i].textContent = listItem[i].textContent.toLowerCase();
-        });
-}
+
+        // listDiv.addEventListener('mouseover',() => {
+        //     listDiv.textContent = listDiv.textContent.toUpperCase();
+        // });
+
+        // listDiv.addEventListener('mouseout',() => {
+        //     listDiv.textContent = listDiv.textContent.toLowerCase();
+        // });
+
+
+document.addEventListener('click', (event) => {
+    console.log(event.target);
+});
+
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
 
@@ -47,10 +52,9 @@ addItemButton.addEventListener('click', () => {
 removeItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.querySelector('li:last-child');
-
     ul.removeChild(li);
 
-});
+}); 
 
 
-addEventListener
+
